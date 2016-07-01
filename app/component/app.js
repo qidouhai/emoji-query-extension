@@ -31,7 +31,7 @@ var App = React.createClass({
   render: function() {
     return (
       <div className='ui container'>
-        <Search onData={this.onData.bind(this) pending={this.pending.bind(this)}}/>
+        <Search onData={this.onData.bind(this)} pending={this.pending.bind(this)}/>
         this.state.pending?
         <Loading />:
         (

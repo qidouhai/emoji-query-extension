@@ -7,7 +7,7 @@ var Item = React.createClass({
     return (
       <div>
         {this.props.data}
-      <div/>
+      </div>
     );
   }
 

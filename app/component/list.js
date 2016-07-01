@@ -12,7 +12,7 @@ var List = React.createClass({
             <Item key={i} data={item} />
           )
         })}
-      <div/>
+      </div>
     );
   }
 

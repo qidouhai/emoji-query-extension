@@ -33,6 +33,10 @@ module.exports = {
         test: /\.(eot|png)$/,
         loader: 'file',
         exclude: /node_modules/
+      },
+      {
+        test: /\.json$/,
+        loader: 'json'
       }
     ]
   }
