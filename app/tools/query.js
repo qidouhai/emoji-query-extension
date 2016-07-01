@@ -2,6 +2,7 @@ var fetch = require('node-fetch');
 var urlencode = require('urlencode');
 
 module.exports = function(q, cb){
+  console.log('start query words');
   q = urlencode(q,'utf8');
   var emoji = 'http://emoji.getdango.com/api/emoji?q=';
   var trans = `http://fanyi.youdao.com/openapi.do?keyfrom=emoji-test&key=703668665&type=data&doctype=json&version=1.1&q=${q}`;
@@ -19,6 +20,7 @@ module.exports = function(q, cb){
       if(json.errorCode) return cb(new Error('Translation error'));
       if(json.translation && json.translation.length > 0){
         var translation = json.translation[0];
+        console.log('get translation then fetch emojis');
         return fetch(emoji + urlencode(translation), opt);
       }else{
         return cb(null,[]);

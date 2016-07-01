@@ -31,18 +31,19 @@ var App = React.createClass({
   render: function() {
     return (
       <div className='ui container'>
-        <Search onData={this.onData.bind(this)} pending={this.pending.bind(this)}/>
-        this.state.pending?
-        <Loading />:
-        (
-          this.state.error?
-          <Message data={this.state.error} />:
-          <List items={this.state.items}/>
-        )
+        <Search onData={this.onData} pending={this.pending} />
+        {(function renderContent(){
+          if(this.state.pending) {
+            return (<Loading />);
+          }else{
+            return this.state.error?
+            <Message data={this.state.error} />:
+            <List items={this.state.items} />
+          }
+        }).bind(this)()}
       </div>
     );
   }
-
 });
 
 module.exports = App;

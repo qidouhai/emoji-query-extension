@@ -1,6 +1,6 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
-var query = require('../tools/query');
+var query = require('../tools/query.js');
 
 var Search = React.createClass({
   getInitialState: function() {
@@ -11,6 +11,7 @@ var Search = React.createClass({
   query: function(e){
     var q = this.state.query;
     if(e.keyCode == 13 && q){
+      console.log(q);
       query(q, this.props.onData);
       this.props.pending();
     }
