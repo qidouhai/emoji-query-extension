@@ -5,7 +5,7 @@ module.exports = function(q, cb){
   console.log('start query words');
   q = urlencode(q,'utf8');
   var emoji = 'http://emoji.getdango.com/api/emoji?q=';
-  var trans = `http://fanyi.youdao.com/openapi.do?keyfrom=emoji-test&key=703668665&type=data&doctype=json&version=1.1&q=${q}`;
+  var trans = `http://fanyi.youdao.com/openapi.do?keyfrom=emoji-test&key=703668665&type=data&doctype=jsonp&version=1.1&q=${q}`;
   // set timeout.
   var opt = {
     timeout: 5000
