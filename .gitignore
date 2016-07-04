@@ -40,4 +40,4 @@ jspm_packages
 semantic
 dist
 _test
-chrome
+./chrome
