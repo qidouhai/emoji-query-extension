@@ -1,10 +1,16 @@
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
-  entry: './app/index.js',
+  entry: [
+    'webpack-dev-server/client?http://localhost:3000',
+    'webpack/hot/only-dev-server',
+    './app/index.js'
+  ],
   output: {
     path: path.join(__dirname, '/dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: './app'
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
@@ -13,10 +19,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js|jsx$/,
-        loader: 'babel',
-        query: {
-          presets: ['es2015','react']
-        },
+        loaders: ['react-hot','babel?presets[]=react,presets[]=es2015'],
         exclude: /node_modules/
       },
       {
@@ -39,5 +42,8 @@ module.exports = {
         loader: 'json'
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ]
 };

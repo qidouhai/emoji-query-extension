@@ -22,14 +22,14 @@ var Search = React.createClass({
   render: function() {
     return (
       <div className='ui vertical segment'>
-      <div class="ui icon input">
+      <div className="ui icon input">
         <input type="text"
           placeholder="搜索..."
           value={this.state.query}
           onKeyDown={this.query}
           onChange={this.changeText}
         />
-        <i class="search icon"></i>
+      <i className="search icon"></i>
       </div>
       </div>
     );
