@@ -42,8 +42,5 @@ module.exports = {
         loader: 'json'
       }
     ]
-  },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ]
+  }
 };

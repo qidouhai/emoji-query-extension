@@ -1,6 +1,6 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
-
+// 400 * 186
 var Search = require('./search');
 var Message = require('./message');
 var Loading = require('./loading');
@@ -32,6 +32,7 @@ var App = React.createClass({
     return (
       <div className='ui container'>
         <Search onData={this.onData} pending={this.pending} />
+        <div className="ui segment" style={{minHeight: '104px'}}>
         {(function renderContent(){
           if(this.state.pending) {
             return (<Loading />);
@@ -41,6 +42,7 @@ var App = React.createClass({
             <List items={this.state.items} />
           }
         }).bind(this)()}
+        </div>
       </div>
     );
   }

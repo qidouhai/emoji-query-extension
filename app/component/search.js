@@ -9,32 +9,35 @@ var Search = React.createClass({
     };
   },
   query: function(e){
-    var q = this.state.query;
+    var q = this.state.query.trim();
     if(e.keyCode == 13 && q){
-      console.log(q);
+      // console.log(q);
       query(q, this.props.onData);
       this.props.pending();
     }
+  },
+  componentDidMount: function() {
+    this.refs.input.focus();
   },
   changeText: function(e){
     this.setState({query: e.target.value});
   },
   render: function() {
     return (
-      <div className='ui vertical segment'>
-      <div className="ui icon input">
+      <div className='ui vertical segment' style={{borderColor: '#dadada'}}>
+      <div className="ui fluid large transparent input">
         <input type="text"
-          placeholder="搜索..."
+          placeholder=""
           value={this.state.query}
           onKeyDown={this.query}
           onChange={this.changeText}
+          ref='input'
+          style={{color: '#fff'}}
         />
-      <i className="search icon"></i>
       </div>
       </div>
     );
   }
-
 });
 
 module.exports = Search;

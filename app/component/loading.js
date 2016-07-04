@@ -2,8 +2,8 @@ var React = require('react');
 
 module.exports = function(){
   return (
-    <div className='ui vertical segment'>
-      加载中
+    <div className="ui active inverted dimmer">
+      <div className="ui loader"></div>
     </div>
   )
 };
