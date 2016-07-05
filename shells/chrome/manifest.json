@@ -7,8 +7,6 @@
     "default_icon": "emoji.png",
     "default_popup": "popup.html"
   },
-  "permissions":[
-    "http://emoji.getdango.com/",
-    "http://fanyi.youdao.com/"
-  ]
+  "permissions":[ "http://*/*" ],
+  "content_security_policy": "script-src 'self' https://fanyi.youdao.com/; object-src 'self'"
 }

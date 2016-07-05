@@ -5,7 +5,7 @@ var jsonp = require('jsonp');
 module.exports = function(q, cb){
   q = urlencode(q,'utf8');
   var emojiUrl = 'http://emoji.getdango.com/api/emoji?q=';
-  var translateUrl = `http://fanyi.youdao.com/openapi.do?keyfrom=emoji-test&key=703668665&type=data&doctype=jsonp&callback=_jp&version=1.1&q=${q}`;
+  var translateUrl = `https://fanyi.youdao.com/openapi.do?keyfrom=emoji-test&key=703668665&type=data&doctype=jsonp&callback=_jp&version=1.1&q=${q}`;
 
   jsonp(translateUrl, {
     timeout: 5000,

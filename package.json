@@ -6,7 +6,9 @@
   "scripts": {
     "build-ui": "cd semantic && gulp build",
     "clean-ui": "rm -rf node_modules",
-    "start": "meido"
+    "start": "meido",
+    "dev": "node server.js",
+    "compile": "webpack --config=webpack.prd.js --progress -c"
   },
   "author": "zhqy",
   "license": "MIT",
