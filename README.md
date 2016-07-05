@@ -1,4 +1,5 @@
 # Emoji-zh
+query emoji with simple chinese in the chrome extension
 
 ## development
 
@@ -26,3 +27,5 @@ gulp
 3. go to chrome://extensions/ load the __chrome_ctx__ folder
 
 ## references:
+1. https://developer.chrome.com/extensions/contentSecurityPolicy
+2. http://ctheu.com/2015/12/29/webpack-hot-reloading-and-react-how/
