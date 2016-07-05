@@ -24,15 +24,15 @@ var Search = React.createClass({
   },
   render: function() {
     return (
-      <div className='ui vertical segment' style={{borderColor: '#dadada'}}>
+      <div className='ui vertical segment' style={{borderColor: 'rgb(230,230,230)'}}>
       <div className="ui fluid large transparent input">
         <input type="text"
-          placeholder=""
+          placeholder="搜索..."
           value={this.state.query}
           onKeyDown={this.query}
           onChange={this.changeText}
           ref='input'
-          style={{color: '#fff'}}
+          style={{color: '#000'}}
         />
       </div>
       </div>

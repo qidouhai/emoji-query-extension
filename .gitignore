@@ -41,3 +41,5 @@ semantic
 dist
 _test
 chrome_ctx
+chrome_ctx.crx
+chrome_ctx.pem

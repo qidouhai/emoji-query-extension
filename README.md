@@ -1,7 +1,11 @@
 # Emoji-Zh
 Query emoji with simple chinese in the chrome extension
 
+![screenshot.jpg](emoji.gif)
+
 ## Installation
+
+Download [.crx](https://github.com/2yuri/emoji-zh/releases/download/v0.0.1/emoji_zh_0.0.1.crx) and install.
 
 ## Prepare the ui framework
 
