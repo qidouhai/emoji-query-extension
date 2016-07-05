@@ -1,7 +1,7 @@
 # Emoji-Zh
 Query emoji with simple chinese in the chrome extension
 
-![screenshot.jpg](emoji.gif)
+![screenshot.jpg](screenshot.png)
 
 ## Installation
 
